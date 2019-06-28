@@ -1,0 +1,363 @@
+@import '_include-media.scss';
+// BREAKPOINTS
+$breakpoints: (small: 568px, medium: 768px, large: 1024px, xlarge: 1280px, xxlarge: 1440px);
+// COLORS
+$color-green: #1a3936;
+$color-lightgreen: #1a4638;
+$color-red: #7f0625;
+$color-black: #000000;
+$color-white: #ffffff;
+$color-grey: rgb(125, 125, 125);
+$color-midgrey: #707070;
+$color-lightgrey: #f1f2f2;
+// FONTS
+@font-face {
+    font-family: "Baskerville Old";
+    src: url("../fonts/BASKVILL.ttf") format("ttf");
+}
+
+
+/*RESET*/
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+ul {
+    padding: 0px;
+    margin: 0px;
+}
+
+
+/*************************************************************************************************************/
+
+
+/*************************************************************************************************************/
+
+
+/*************************************************************************************************************/
+
+#mobileToggle {
+    display: none;
+    position: absolute;
+    left: 24px;
+    top: 30px;
+    color: $color-green;
+    font-size: 32px;
+}
+
+#bodyContainer {
+    min-height: calc(100vh - 70px);
+    width: 810px;
+    margin: 0 auto;
+    background-color: white;
+    /*min-height: 1200px;*/
+    margin-bottom: 32px;
+    @include media('<large') {
+        width: 768px;
+    }
+    @include media('<medium') {
+        width: 100%;
+    }
+    @include media('<=small') {
+        width: 100%;
+        min-height: 100%;
+        margin: 0px;
+    }
+}
+
+#headerContainer {
+    width: 810px;
+    margin: 0 auto;
+    height: 300px;
+    @include media('<large') {
+        width: 568px;
+    }
+    @include media('<medium') {
+        width: 90%;
+        ;
+    }
+    @include media('<=small') {
+        width: 100%;
+        display: block;
+        height: auto;
+        z-index: 100;
+        min-height: 110px;
+    }
+    #logoContainer {
+        height: 220px;
+        width: 100%;
+        background-color: white;
+        @include media('<=small') {
+            height: 94px;
+            display: block;
+            img {
+                min-width: 320px;
+                width: 100%;
+            }
+        }
+    }
+    nav {
+        position: relative;
+        .active {
+            font-weight: 600;
+            color: $color-green;
+        }
+        ul {
+            width: 100%;
+            height: 80px;
+            padding: 25px 0px;
+            display: flex;
+            flex-wrap: wrap;
+            @include media('<=small') {
+                padding: 0px;
+                min-width: 320px;
+                width: 100%;
+                height: auto;
+                display: block;
+                background-color: $color-green;
+            }
+            li {
+                flex: 1 1 100px;
+                text-align: center;
+                @include media('<=small') {
+                    display: inline-block;
+                    width: 100%;
+                    margin: 0px;
+                    padding: 16px 0px;
+                }
+            }
+            li:hover {
+                @include media('<=small') {
+                    background-color: $color-red;
+                    transition: 1s ease;
+                }
+            }
+            li:not(:nth-child(4)) {
+                @include media('<=small') {
+                    border-bottom: 1px solid #ffffff17;
+                }
+            }
+            li:not(:nth-child(4)):after {
+                content: '|';
+                margin: 0px 40px;
+                vertical-align: text-bottom;
+                @include media('<=small') {
+                    display: none;
+                }
+            }
+            a,
+            li:not(:nth-child(4)):after {
+                font-family: 'Montserrat', sans-serif;
+                font-size: 26px;
+                font-weight: 300;
+                color: $color-midgrey;
+                text-transform: uppercase;
+                @include media('<=small') {
+                    font-size: 16px;
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+}
+
+#homeContainer {
+    background-image: url(../img/home.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 1210px;
+    margin: 18px 0px;
+    @include media('<=small') {
+        background-image: url(../img/home-mobile.jpg);
+        background-position: center;
+        width: 100%;
+        min-height: 565px;
+        background-repeat: no-repeat;
+        margin: 0px;
+        max-height: 649px;
+    }
+    .homeContent {
+        height: 100%;
+        position: relative;
+        padding: 10px;
+        @include media('<=small') {
+            padding: 0px;
+        }
+    }
+    #actusContainer {
+        position: relative;
+        width: 100%;
+        height: calc(100% - 20px);
+        text-align: center;
+        background-color: #dbdbdbc2;
+        font-family: "Baskerville Old";
+        color: $color-red;
+        z-index: 2;
+        @include media('<=small') {
+            height: 100%;
+        }
+        h2 {
+            font-weight: 200;
+            font-size: 60px;
+            @include media('<=small') {
+                font-size: 42px;
+            }
+        }
+        h3 {
+            font-weight: 200;
+            font-size: 38px;
+            margin: 4px;
+            @include media('<=small') {
+                font-size: 22px;
+            }
+        }
+        h3:before,
+        h3:after {
+            content: '-';
+            vertical-align: text-bottom;
+            margin: 0px 12px;
+        }
+        p {
+            font-size: 26px;
+            margin: 0px;
+            @include media('<=small') {
+                font-size: 18px;
+            }
+        }
+        #Actus {
+            padding-top: 100px;
+            @include media('<=small') {
+                padding: 10px;
+            }
+            h2 {
+                margin-bottom: 16px;
+            }
+        }
+        .actusContent {
+            margin: 0px 0px 64px;
+        }
+        .separator {
+            border-top: 1px solid $color-red;
+            width: 320px;
+            margin: 0 auto;
+            margin-bottom: 32px;
+            @include media('<=small') {
+                width: 220px;
+            }
+        }
+        #closeActus {
+            font-family: "Montserrat";
+            position: absolute;
+            right: 20px;
+            top: 15px;
+            font-size: 32px;
+            color: #3a3a3a;
+            cursor: pointer;
+        }
+    }
+}
+
+#footerContainer {
+    width: 100%;
+    height: 70px;
+    background-color: $color-green;
+    margin-bottom: -16px;
+    #socialContainer {
+        margin: 0px 142px;
+        padding: 22px 0px;
+        @include media('<=small') {
+            margin: 0px;
+            padding: 0px;
+            width: 320px;
+            margin: 0 auto;
+            padding: 20px 0px;
+        }
+        li {
+            display: inline-block;
+        }
+        .footerlinks:after {
+            content: '|';
+            margin: 0px 12px;
+            vertical-align: top;
+            color: #ffffff;
+            font-size: 22px;
+            font-weight: 800;
+            @include media('<=small') {
+                font-size: 14px;
+            }
+        }
+        .sociallinks {
+            margin-right: 6px;
+        }
+        a {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 22px;
+            font-weight: 400;
+            color: #ffffff;
+            @include media('<=small') {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+#contactWrapper {
+    min-height: 800px;
+}
+
+#contactInfosContainer {
+    background-color: $color-lightgrey;
+    width: 1091px;
+    max-height: 634px;
+    min-height: 434px;
+    padding: 0px 0px 120px 0px;
+    border-left: 12px solid $color-green;
+    position: absolute;
+    left: 200px;
+    #contactH2Container {
+        background-image: url(../img/H2_CONTACT.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 439px;
+        height: 248px;
+        margin: 0 auto;
+        padding-top: 125px;
+    }
+    h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        color: $color-lightgreen;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 46px;
+    }
+    ul,
+    p {
+        text-align: center;
+    }
+    li {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        color: $color-midgrey;
+        font-size: 23px;
+    }
+    p,
+    .infosSmall {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 200;
+        font-size: 23px;
+        margin-bottom: 24px;
+    }
+}
+
+#contactImageContainer {
+    position: absolute;
+    bottom: -10px;
+    right: 400px;
+}
