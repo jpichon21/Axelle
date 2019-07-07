@@ -27,7 +27,7 @@
 
         <div id="bioGalleryWrapper">
             <ul>
-                <div id="arrowDown"><img src="img/arrow-down.png"></div>
+                <div id="arrowDown" class="arrow"><img src="img/arrow-down.png"></div>
                 <li><img src="img/contents/bio-1.jpg"></li>
                 <li><img src="img/contents/bio-2.jpg"></li>
                 <li><img src="img/contents/bio-3.jpg"></li>

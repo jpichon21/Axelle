@@ -1,4 +1,5 @@
 $( document ).ready(function() {
+  $(".en").hide();
 
   //HOMEPAGE
   var isActuClosed = false;
@@ -33,16 +34,23 @@ $( document ).ready(function() {
 }
 
   // SMOOTH SCROLL 
+    var positionY = 0;
+
     $('#arrowDown').on('click', function() {
       scrollTo( $("#bioContent") );
     });
-  
+
+    $('#arrowPlus').on('click', function() {
+      positionY += 200;
+      $('#Actus').animate({scrollTop: positionY}, 800);
+    });
 
   function scrollTo( target ) {
     if( target.length ) {
         $("html, body").stop().animate( { scrollTop: target.offset().top }, 800);
       }
   }
+
 
   //LANGUAGE TOGGLE
     $('#enToggle').on('click', function() {

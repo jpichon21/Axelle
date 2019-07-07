@@ -5,6 +5,7 @@ $breakpoints: (small: 568px, medium: 768px, large: 1024px, xlarge: 1280px, xxlar
 $color-green: #1a3936;
 $color-lightgreen: #1a4638;
 $color-red: #7f0625;
+$color-orange: #dd981d;
 $color-black: #000000;
 $color-white: #ffffff;
 $color-grey: rgb(125, 125, 125);
@@ -70,8 +71,17 @@ ul {
     }
 }
 
+.actusContent {
+    margin: 0px 0px 64px;
+}
+
 .SpecialContainer{
     width: 1530px!important;
+}
+
+
+.fullWidthContainer{
+    width: 100%!important;
 }
 
 #headerContainer {
@@ -242,9 +252,6 @@ ul {
                 margin-bottom: 16px;
             }
         }
-        .actusContent {
-            margin: 0px 0px 64px;
-        }
         .separator {
             border-top: 1px solid $color-red;
             width: 320px;
@@ -368,9 +375,6 @@ ul {
 
 #bioGalleryWrapper{
     position: relative;
-    #arrowDown:hover{
-        box-shadow: 1px rgba(0,0,0,0.12);
-    }
     #arrowDown{
         cursor: pointer;
         position: absolute;
@@ -394,9 +398,6 @@ ul {
 }
 
 #bioContentWrapper{
-    .en{
-        display: none;
-    }
     #bioContent{
         margin-bottom: 64px;
     }
@@ -432,4 +433,78 @@ ul {
            }
         }
     }
+}
+
+
+
+.fullWidthContainer{
+    margin-bottom: 0px!important;
+    .stop-scrolling {
+        overflow: hidden!important;
+    }
+    #Actus{
+        margin-top: 72px;
+        overflow: scroll;
+        overflow-x: hidden;
+        max-height: 600px;
+    }
+    #datesContainer{
+        width: 50%;
+        float: right;
+        min-width: 400px;
+        background-color: $color-orange;
+        height: 100vh;
+        position: relative;
+        p, h3{
+            text-align: center;
+            font-family: "Baskerville Old";
+            color: #ffffff;
+        }
+        h3 {
+            font-weight: 200;
+            font-size: 38px;
+            margin: 4px;
+            @include media('<=small') {
+                font-size: 22px;
+            }
+        }
+        h3:before,
+        h3:after {
+            content: '-';
+            vertical-align: text-bottom;
+            margin: 0px 12px;
+        }
+        p {
+            font-size: 26px;
+            margin: 0px;
+            @include media('<=small') {
+                font-size: 18px;
+            }
+        }
+        #arrowPlus{
+            cursor: pointer;
+            position: absolute;
+            bottom: 36px;
+            left: 50%;
+            margin-left: -72px;
+            img{
+                width: 72px;
+                height: 72px;
+            }
+        }
+    }
+    #agendaContainer{
+        height: 100vh;
+        min-height: 800px;
+    }
+    #imageContainer{
+        width: 50%;
+        float: left;
+        min-width: 400px;
+        background-image: url('../img/contents/agenda.jpg');
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
 }
