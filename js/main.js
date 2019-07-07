@@ -32,4 +32,27 @@ $( document ).ready(function() {
     });
 }
 
+  // SMOOTH SCROLL 
+    $('#arrowDown').on('click', function() {
+      scrollTo( $("#bioContent") );
+    });
+  
+
+  function scrollTo( target ) {
+    if( target.length ) {
+        $("html, body").stop().animate( { scrollTop: target.offset().top }, 800);
+      }
+  }
+
+  //LANGUAGE TOGGLE
+    $('#enToggle').on('click', function() {
+      $('.fr').hide();
+      $('.en').show();
+    });
+
+    $('#frToggle').on('click', function() {
+      $('.en').hide();
+      $('.fr').show();
+    });
+
 });
