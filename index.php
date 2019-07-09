@@ -17,7 +17,7 @@
   <script src="https://kit.fontawesome.com/6164dace53.js"></script>
 </head>
 
-<body>
+<body class="m-scene">
 
 <?php include 'components/scripts.php';?>
 
@@ -27,7 +27,7 @@
   </script>
   <script src="https://www.google-analytics.com/analytics.js" async defer></script>
 
-<div id="bodyContainer">
+<div id="bodyContainer" class="scene_element scene_element--fadein">
 <?php include 'components/header.php';?>
  
   

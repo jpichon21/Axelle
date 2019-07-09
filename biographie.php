@@ -18,11 +18,11 @@
     <script src="https://kit.fontawesome.com/6164dace53.js"></script>
 </head>
 
-<body>
+<body class="m-scene">
   
 <?php include 'components/scripts.php';?>
 
-    <div id="bodyContainer" class="SpecialContainer">
+    <div id="bodyContainer" class="SpecialContainer scene_element scene_element--fadein">
         <?php include 'components/header.php';?>
 
         <div id="bioGalleryWrapper">

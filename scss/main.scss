@@ -17,6 +17,75 @@ $color-lightgrey: #f1f2f2;
     src: url("../fonts/BASKVILL.ttf") format("ttf");
 }
 
+// KEYFRAMES
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translate3d(0, 100%, 0);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  
+  @keyframes fadeInRight {
+    0% {
+      opacity: 0;
+      transform: translate3d(100%, 0, 0);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+// FADES
+
+.m-scene {
+    /** Basic styles for an animated element */
+    .scene_element {
+      animation-duration: 0.25s;
+      transition-timing-function: ease-in;
+      animation-fill-mode: both;
+  
+    }
+  
+    /** An element that fades in */
+    .scene_element--fadein {
+      animation-name: fadeIn;
+    }
+  
+    /** An element that fades in and slides up */
+    .scene_element--fadeinup {
+      animation-name: fadeInUp;
+    }
+  
+    /** An element that fades in and slides from the right */
+    .scene_element--fadeinright {
+      animation-name: fadeInRight;
+    }
+
+      /** Reverse "exit" animations */
+    &.is-exiting {
+        .scene_element {
+        animation-direction: alternate-reverse;
+        }
+    }
+}
 
 /*RESET*/
 
@@ -80,7 +149,7 @@ ul {
 }
 
 
-.fullWidthContainer{
+.agendaFullWidthContainer, .mediasFullWidthContainer{
     width: 100%!important;
 }
 
@@ -437,7 +506,7 @@ ul {
 
 
 
-.fullWidthContainer{
+.agendaFullWidthContainer{
     margin-bottom: 0px!important;
     .stop-scrolling {
         overflow: hidden!important;
@@ -503,6 +572,115 @@ ul {
         float: left;
         min-width: 400px;
         background-image: url('../img/contents/agenda.jpg');
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+}
+
+
+.mediasFullWidthContainer{
+    margin-bottom: 0px!important;
+    .stop-scrolling {
+        overflow: hidden!important;
+    }
+    #Actus{
+        margin-top: 0px;
+        overflow: scroll;
+        overflow-x: hidden;
+        min-height: 500px;
+        .videoLinkContainer{
+            background-image: url(../img/H2_VIDEOS.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 0 auto;
+            padding-top: 125px;
+        }
+        .activeMediaLink{
+            font-weight: 600;
+            font-size: 42px;
+            color: $color-green;
+            transition: 0.5s ease;
+        }
+        .activeContent{
+            border-top: 1px solid $color-midgrey;
+            border-bottom: 1px solid $color-midgrey;
+        }
+        #actusVisibleList{
+            text-align: center;
+            width: 320px;
+            margin: 0 auto;
+            .actusContent{
+                padding: 84px 0px;
+                margin: 0px;
+            }
+        }
+        a{
+            font-family: 'Montserrat', sans-serif;
+            font-size: 36px;
+            font-weight: 300;
+            color: #707070;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: 0.5s ease;
+        }
+    }
+    #datesContainer{
+        width: 34%;
+        float: right;
+        min-width: 400px;
+        background-color: $color-lightgrey;
+        height: 668px;
+        position: relative;
+        p, h3{
+            text-align: center;
+            font-family: "Baskerville Old";
+            color: #ffffff;
+        }
+        h3 {
+            font-weight: 200;
+            font-size: 38px;
+            margin: 4px;
+            @include media('<=small') {
+                font-size: 22px;
+            }
+        }
+        h3:before,
+        h3:after {
+            content: '-';
+            vertical-align: text-bottom;
+            margin: 0px 12px;
+        }
+        p {
+            font-size: 26px;
+            margin: 0px;
+            @include media('<=small') {
+                font-size: 18px;
+            }
+        }
+        #arrowPlus{
+            cursor: pointer;
+            position: absolute;
+            bottom: 36px;
+            left: 50%;
+            margin-left: -72px;
+            img{
+                width: 72px;
+                height: 72px;
+            }
+        }
+    }
+    #mediaContainer{
+        height: 668px;
+        min-height: 668px;
+    }
+    #imageContainer{
+        width: 66%;
+        float: left;
+        min-width: 400px;
+        background-image: url('../img/contents/medias-home.jpg');
         height: 100%;
         background-size: cover;
         background-repeat: no-repeat;

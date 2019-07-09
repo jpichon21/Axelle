@@ -8,7 +8,7 @@
       <nav>
         <ul id="mainMenu">
           <li><a id="bioLink" href="biographie.php">Biographie</a></li>
-          <li><a id="mediaLink" href="#">Médias</a></li>
+          <li><a id="mediaLink" href="medias.php">Médias</a></li>
           <li><a id="agendaLink" href="agenda.php">Agenda</a></li>
           <li><a id="contactLink" href="contact.php">Contact</a></li>
         </ul>
