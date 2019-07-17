@@ -43,7 +43,7 @@
 </div>
 
     <script>
-        $('#agendaLink').addClass("active");
+        $('#mediasLink').addClass("active");
     </script>
     <!--End bodyContainer-->
 </body>
