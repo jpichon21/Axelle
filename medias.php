@@ -36,12 +36,12 @@
             </li>
             <li>
             <div class="actusContent activeContent videoLinkContainer">
-                <a id="videoMediasLink" class="activeMediaLink">Vidéos</a>
+                <a href="videos.php" id="videoMediasLink" class="activeMediaLink">Vidéos</a>
             </div>
             </li>
             <li>
             <div class="actusContent">
-                <a>Presse</a>
+                <a href="presse.php">Presse</a>
             </div>
             </li>
             <span id="actusEnd"></span>
@@ -56,7 +56,7 @@
     <script>
         $('#mediaLink').addClass("active");
 
-        $('.actusContent a').click(function () {
+        $('.actusContent a').hover(function () {
             $('.actusContent a').removeClass('activeMediaLink');
             $(this).addClass('activeMediaLink');
         });

@@ -23,7 +23,6 @@ $( document ).ready(function() {
     isActuClosed = true;
   }
 
-
   // MOBILE MENU
   if (window.innerWidth <= 568) {
     $("#mainMenu").hide();
@@ -45,12 +44,16 @@ $( document ).ready(function() {
       $('#Actus').animate({scrollTop: positionY}, 800);
     });
 
+    $('#arrowPlusPresse').on('click', function() {
+      positionY += 400;
+      $('#Actus').animate({scrollTop: positionY}, 800);
+    });
+
   function scrollTo( target ) {
     if( target.length ) {
         $("html, body").stop().animate( { scrollTop: target.offset().top }, 800);
       }
   }
-
 
   //LANGUAGE TOGGLE
     $('#enToggle').on('click', function() {

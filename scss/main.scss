@@ -12,6 +12,7 @@ $color-white: #ffffff;
 $color-grey: rgb(125, 125, 125);
 $color-midgrey: #707070;
 $color-lightgrey: #f1f2f2;
+$color-bluegrey: #39555a;
 // FONTS
 @font-face {
     font-family: "Baskerville Old";
@@ -114,6 +115,15 @@ ul {
 .flex-control-paging li a.flex-active {
     background: $color-pink;
 }
+
+#lightcase-overlay {
+    background: #f6f6f6f0!important;
+}
+
+.lightcase-icon-close:before {
+    color: black;
+}
+
 /*
 .flexslider {
     img {
@@ -166,7 +176,7 @@ ul {
 }
 
 
-.agendaFullWidthContainer, .mediasFullWidthContainer{
+.agendaFullWidthContainer, .mediasFullWidthContainer, .presseFullWidthContainer{
     width: 100%!important;
 }
 
@@ -589,6 +599,82 @@ ul {
         float: left;
         min-width: 400px;
         background-image: url('../img/contents/agenda.jpg');
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+}
+
+.presseFullWidthContainer{
+    margin-bottom: 0px!important;
+    .stop-scrolling {
+        overflow: hidden!important;
+    }
+    #Actus{
+        margin-top: 72px;
+        overflow: scroll;
+        overflow-x: hidden;
+        min-height: 600px;
+        max-height: 74%;
+    }
+    #datesContainer{
+        width: 50%;
+        float: left;
+        min-width: 400px;
+        background-color: $color-bluegrey;
+        height: 100vh;
+        position: relative;
+        p, h3{
+            text-align: center;
+            font-family: "Baskerville Old";
+            color: #ffffff;
+        }
+        h3 {
+            font-weight: 200;
+            font-size: 38px;
+            margin: 4px;
+            @include media('<=small') {
+                font-size: 22px;
+            }
+        }
+        h3:before,
+        h3:after {
+            content: '-';
+            vertical-align: text-bottom;
+            margin: 0px 12px;
+        }
+        p {
+            font-size: 22px;
+            margin: 0px;
+            padding: 25px 80px;
+            text-align: justify;
+            line-height: 26px;
+            @include media('<=small') {
+                font-size: 18px;
+            }
+        }
+        #arrowPlusPresse{
+            cursor: pointer;
+            position: absolute;
+            bottom: 36px;
+            left: 50%;
+            margin-left: -72px;
+            img{
+                width: 72px;
+                height: 72px;
+            }
+        }
+    }
+    #presseContainer{
+        height: 100vh;
+        min-height: 800px;
+    }
+    #imageContainer{
+        width: 50%;
+        float: right;
+        min-width: 400px;
+        background-image: url('../img/contents/presse.jpg');
         height: 100%;
         background-size: cover;
         background-repeat: no-repeat;
