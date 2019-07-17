@@ -31,7 +31,7 @@
             <ul id="actusVisibleList">
             <li>
             <div class="actusContent">
-                <a>Photos</a>
+                <a href="photos.php">Photos</a>
             </div>
             </li>
             <li>

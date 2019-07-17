@@ -5,6 +5,7 @@ $breakpoints: (small: 568px, medium: 768px, large: 1024px, xlarge: 1280px, xxlar
 $color-green: #1a3936;
 $color-lightgreen: #1a4638;
 $color-red: #7f0625;
+$color-pink: #ff0060;
 $color-orange: #dd981d;
 $color-black: #000000;
 $color-white: #ffffff;
@@ -106,7 +107,23 @@ ul {
     margin: 0px;
 }
 
+.flex-control-paging li a {
+    background: rgba(255, 255, 255, 0.5);
+}
 
+.flex-control-paging li a.flex-active {
+    background: $color-pink;
+}
+/*
+.flexslider {
+    img {
+        max-width: 80%;
+        max-height: 80%;
+        display: block;
+        margin-left: auto;
+                margin-right: auto;
+    }
+}*/
 /*************************************************************************************************************/
 /*************************************************************************************************************/
 /*************************************************************************************************************/
@@ -676,6 +693,14 @@ ul {
         height: 668px;
         min-height: 668px;
     }
+    #photosGalleryContainer{
+        min-height: 668px;
+        overflow-x: hidden;
+        margin-bottom: 68px;
+        width: 92%;
+        margin: 0 auto;
+
+    }
     #imageContainer{
         width: 66%;
         float: left;
@@ -686,4 +711,23 @@ ul {
         background-repeat: no-repeat;
     }
     
+}
+
+.photosTitle{
+    font-family: "Baskerville Old";
+    text-align: center;
+    font-size: 52px;
+    font-weight: 400;
+    color: $color-pink;
+}
+
+.photosTitle:after{
+    content: "______";
+    margin-top: -46px;
+    color: $color-pink;
+    display: block;
+}
+
+.flex-prev, .flex-next{
+    outline: none;
 }
