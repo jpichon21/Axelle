@@ -1,5 +1,9 @@
  <!----------Header-------->
  <header id="headerContainer">
+ <ul id="socialContainer">
+              <li class="sociallinks"><a href="https://www.facebook.com"><i class="fab fa-facebook-square"></i></a></li>
+              <li class="sociallinks"><a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a></li>
+          </ul>
     <div>
         <div id="logoContainer">
           <span id="mobileToggle"><i class="fas fa-bars"></i></span>

@@ -148,6 +148,7 @@ ul {
 }
 
 #bodyContainer {
+    position: relative;
     min-height: calc(100vh - 70px);
     width: 810px;
     margin: 0 auto;
@@ -168,7 +169,7 @@ ul {
 }
 
 .actusContent {
-    margin: 0px 0px 64px;
+    margin: 0px 0px 72px;
 }
 
 .SpecialContainer{
@@ -181,6 +182,23 @@ ul {
 }
 
 #headerContainer {
+    position: relative;
+    #socialContainer{
+        position: absolute!important;
+        right: -282px;
+        top: 50px;
+        .sociallinks{
+            display: inline-block;
+            a{
+                color: $color-green;
+                font-size: 22px;
+            }
+        }
+        .sociallinks:first-of-type{
+            margin-right: 4px;
+        }
+ 
+    }
     width: 810px;
     margin: 0 auto;
     height: 300px;
