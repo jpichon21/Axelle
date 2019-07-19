@@ -8,12 +8,15 @@
     <link rel="stylesheet" href="css/flexslider.css">
     <link rel="stylesheet" href="css/lightcase.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
 
     <script src="https://kit.fontawesome.com/6164dace53.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="js/lightcase.js"></script>
     <script src="js/jquery.flexslider-min.js"></script>
+
 
     <script>
     	jQuery(document).ready(function($) {

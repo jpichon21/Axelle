@@ -803,7 +803,81 @@ ul {
         margin-bottom: 68px;
         width: 92%;
         margin: 0 auto;
-
+    }
+    #videosGalleryContainer{
+        min-height: 668px;
+        overflow-x: hidden;
+        margin-bottom: 68px;
+        width: 1640px;
+        max-width: 1640px;
+        margin: 0 auto;
+        #owl-fullpage .item iframe{
+            display: block;
+            width: 100%;
+        }
+        .owl-nav{
+            position: absolute;
+            top: 0px;
+            font-size: 232px;
+            width: 100%;
+            top: 96px;
+            .owl-next{
+                position: absolute;
+                right: 0px;
+            }
+            .owl-next, .owl-prev{
+                color: $color-green;
+                outline: none!important;
+                 span{
+                    outline: none!important;
+                }
+            }
+        }
+        .owl-next disabled{
+            display: none;
+        }
+        .carouselContainer{
+            display: block;
+            width: 100vw;
+            height: auto;
+        }
+        .imageContainer{
+            float: left;
+            margin-right: 34px;
+            min-height: 620px;
+            max-width: 852px;
+            width: 52%;
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+        .separatorContainer{
+            width: 1px;
+            display: inline-block;
+            height: 515px;
+            border-right: 1px solid $color-lightgreen;
+            border-collapse: collapse;
+        }
+        .textContainer{
+            float: right;
+            background-color: $color-lightgrey;
+            max-height: 515px;
+            height: 515px;
+            width: 717px;
+            .textContent{
+                padding: 25px;
+                p{
+                    font-size: 16px;
+                    line-height: 26px;
+                    font-weight: 300;
+                }
+            }
+            h2{
+                color: $color-green;
+                font-size: 36px;
+            }
+        }
     }
     #imageContainer{
         width: 66%;

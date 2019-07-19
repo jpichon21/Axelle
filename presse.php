@@ -43,7 +43,7 @@
 </div>
 
     <script>
-        $('#mediasLink').addClass("active");
+        $('#mediaLink').addClass("active");
     </script>
     <!--End bodyContainer-->
 </body>
