@@ -950,9 +950,14 @@ ul {
     #loginContainer{
         max-width: 400px;
         margin-top: 20vh;
-        background-color: $color-lightgrey;
+        background-color: #fafafa;
         padding: 40px;
-        border-radius: 10px;
+        border-radius: 3px;
+        border: 1px solid #e8e8e8;
+        min-height: 400px;
+        .error-msg{
+            text-align: center;
+        }
         input{
             margin: 6px 0px;
         }
@@ -999,7 +1004,7 @@ ul {
 .navbar{
     background-color: $color-green;
     padding: 10px;
-    .btn.btn-link, .btn.btn-link:hover, a, a:hover {
+    .btn.btn-link, .btn.btn-link:hover, a, a:hover, a:visited {
         color: #fff;
         text-decoration: none;
     }

@@ -14,7 +14,7 @@ if (isset($_SESSION['logged_in'])){
         <link rel="stylesheet" href="../css/spectre/spectre-icons.min.css"/>
     <head>
     <body>
-        
+
     <?php include 'header.php'; ?>
 
     <div id="adminPageContainer">
@@ -109,17 +109,18 @@ if (isset($_SESSION['logged_in'])){
     <body>
     <div id="loginPageContainer">
 
-        <?php if (isset($error)) { ?>
-            <p style="color:#aa0000;"><?php echo $error; ?></p>
-        <?php } ?>
-        
+  
         <div class="container" id="loginContainer">
-        <h2>Connexion Admin</h2>
+        <h2>Se connecter</h2>
+        <?php if (isset($error)) { ?>
+            <p style="color:#aa0000;" class="error-msg"><?php echo $error; ?></p>
+        <?php } ?>
             <div class="form-group column col-md-10 ">
                 <form action="index.php" method="post">
-                    <input class="form-input" type="text" name="username" placeholder="Username"/>
-                    <input class="form-input" type="password" name="password" placeholder="Password"/>
-                    <input class="btn btn-primary input-group-btn" type="submit" value="Login"/>
+                    <input class="form-input" type="text" name="username" placeholder="Identifiant"/>
+                    <input class="form-input" type="password" name="password" placeholder="Mot de passe"/>
+                    <input class="btn btn-primary input-group-btn" type="submit" value="Connexion"/>
+                    <a href="../index.php" class="return">🡐 Retour</a>
                 </form>
             </div>
         </div>
