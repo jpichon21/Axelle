@@ -1,6 +1,11 @@
+<?php 
+include_once 'components/connection.php';
+include_once 'components/imports/date.php';
+$date = new Date;
+$dates = $date->fetch_all();
+?>
 <!doctype html>
 <html class="no-js" lang="">
-
 <head>
     <meta charset="utf-8">
     <title>Axelle FANYO | Soprano </title>
@@ -29,40 +34,15 @@
         <div id="datesContainer">
         <div id="Actus" class="stop-scrolling">
             <ul id="actusVisibleList">
-            <div class="actusContent">
-                <h3>Brahms : un requiem allemand</h3>
-                <p>Mathieu Romano (direction) - Ensemble Aedes - Les Siècles <br> 16 août 2019 - Festival de Lessay</p>
-            </div>
+        <?php foreach ($dates as $date) { ?>
             <li>
                 <div class="actusContent">
-                    <h3>Brahms : un requiem allemand</h3>
-                    <p>Mathieu Romano (direction) - Ensemble Aedes - Les Siècles <br> 16 août 2019 - Festival de Lessay</p>
+                    <h3><?php echo $date['date_title'];  ?></h3>
+                    <p><?php echo $date['date_content']; ?></p>
                  </div>
             </li>
-            <li>
-                <div class="actusContent">
-                    <h3>Brahms : un requiem allemand</h3>
-                    <p>Mathieu Romano (direction) - Ensemble Aedes - Les Siècles <br> 16 août 2019 - Festival de Lessay</p>
-                </div>
-            </li>
-            <li>
-                <div class="actusContent">
-                    <h3>Brahms : un requiem allemand</h3>
-                    <p>Mathieu Romano (direction) - Ensemble Aedes - Les Siècles <br> 16 août 2019 - Festival de Lessay</p>
-                </div>
-            </li>
-            <li>
-                <div class="actusContent">
-                    <h3>Brahms : un requiem allemand</h3>
-                    <p>Mathieu Romano (direction) - Ensemble Aedes - Les Siècles <br> 16 août 2019 - Festival de Lessay</p>
-                </div>
-            </li>
-            <li>
-                <div class="actusContent">
-                    <h3>Brahms : un requiem allemand</h3>
-                    <p>Mathieu Romano (direction) - Ensemble Aedes - Les Siècles <br> 16 août 2019 - Festival de Lessay</p>
-                </div>
-            </li>
+        <?php } ?>
+
             <span id="actusEnd"></span>
         </ul>
         </div>
@@ -81,4 +61,3 @@
 
 
 </html>
-<

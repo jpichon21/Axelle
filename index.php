@@ -1,3 +1,11 @@
+<?php 
+include_once 'components/connection.php';
+include_once 'components/imports/actualite.php';
+
+$actualite = new Actualite;
+$actualites = $actualite->fetch_all();
+?>
+
 <!doctype html>
 <html class="no-js" lang="">
 
@@ -26,14 +34,13 @@
         <!-- Actualités Ici -->
         <h2>Actualités</h2>
         <div class="separator"></div>
-        <div class="actusContent">
-          <h3>Brahms : un requiem allemand</h3>
-          <p>Mathieu Romano (direction) - Ensemble Aedes - Les Siècles <br> 16 août 2019 - Festival de Lessay</p>
-        </div>
-        <div class="actusContent">
-            <h3>Brahms : un requiem allemand</h3>
-            <p>Mathieu Romano (direction) - Ensemble Aedes - Les Siècles <br> 16 août 2019 - Festival de Lessay</p>
-        </div>
+        <?php foreach ($actualites as $actualite) { ?>
+          <div class="actusContent">
+            <h3><?php echo $actualite['actualite_tilte'];  ?></h3>
+            <p><?php echo $actualite['actualite_content'];  ?></p>
+          </div>
+        <?php } ?>
+        
       </div>
     </div>
       

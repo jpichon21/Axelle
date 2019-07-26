@@ -42,7 +42,9 @@
 </div>
 
     <script>
+      if (window.innerWidth >= 568) {
         $('#mediaLink').addClass("active");
+      }
 
         $('.actusContent a').hover(function () {
             $('.actusContent a').removeClass('activeMediaLink');
@@ -56,4 +58,3 @@
 
 
 </html>
-<

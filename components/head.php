@@ -23,13 +23,25 @@
 		    $('a[data-rel^=lightcase]').lightcase();
         });
         $(window).load(function() {
-        $('.flexslider').flexslider({
-            animation: false,
-            animationLoop: false,
-            itemWidth: 290,
-            itemMargin: 30,
-            minItems: 2,
-            maxItems: 3
-            });
+            if (window.innerWidth <= 568) {
+                $('.flexslider').flexslider({
+                    animation: false,
+                    animationLoop: false,
+                    itemWidth: 333,
+                    itemMargin: 30,
+                    minItems: 1,
+                    maxItems: 3
+                });
+            }else{
+                $('.flexslider').flexslider({
+                        animation: false,
+                        animationLoop: false,
+                        itemWidth: 290,
+                        itemMargin: 30,
+                        minItems: 1,
+                        maxItems: 3
+                });
+            }
         });
+
     </script>

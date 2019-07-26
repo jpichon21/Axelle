@@ -187,6 +187,9 @@ ul {
         position: absolute!important;
         right: -282px;
         top: 50px;
+        @include media('<medium') {
+            display: none;
+        }
         .sociallinks{
             display: inline-block;
             a{
@@ -207,7 +210,6 @@ ul {
     }
     @include media('<medium') {
         width: 90%;
-        ;
     }
     @include media('<=small') {
         width: 100%;
@@ -592,6 +594,8 @@ ul {
         p {
             font-size: 26px;
             margin: 0px;
+            max-width: 668px;
+            margin: 0 auto;
             @include media('<=small') {
                 font-size: 18px;
             }
@@ -724,6 +728,9 @@ ul {
             font-size: 42px;
             color: $color-green;
             transition: 0.5s ease;
+            @include media('<medium') {
+                font-size: 30px;
+            }
         }
         .activeContent{
             border-top: 1px solid $color-midgrey;
@@ -733,9 +740,16 @@ ul {
             text-align: center;
             width: 320px;
             margin: 0 auto;
+            @include media('<medium') {
+                width: 100%;
+                min-width: 100%;
+            }
             .actusContent{
                 padding: 84px 0px;
                 margin: 0px;
+                @include media('<medium') {
+                    padding: 52px 0px;
+                }
             }
         }
         a{
@@ -746,6 +760,9 @@ ul {
             text-transform: uppercase;
             cursor: pointer;
             transition: 0.5s ease;
+            @include media('<medium') {
+                font-size: 26px;
+            }
         }
     }
     #datesContainer{
@@ -755,6 +772,9 @@ ul {
         background-color: $color-lightgrey;
         height: 668px;
         position: relative;
+        @include media('<medium') {
+            height: 424px;
+        }
         p, h3{
             text-align: center;
             font-family: "Baskerville Old";
@@ -796,6 +816,11 @@ ul {
     #mediaContainer{
         height: 668px;
         min-height: 668px;
+        @include media('<medium') {
+            min-height: 220px;
+            height: 240px;
+            width: 100%;
+        }
     }
     #photosGalleryContainer{
         min-height: 668px;
@@ -887,6 +912,11 @@ ul {
         height: 100%;
         background-size: cover;
         background-repeat: no-repeat;
+        @include media('<medium') {
+            width: 100%;
+            min-width: 100%;
+        }
+        
     }
     
 }
@@ -897,6 +927,10 @@ ul {
     font-size: 52px;
     font-weight: 400;
     color: $color-pink;
+    @include media('<medium') {
+        margin: 12px;
+        font-size: 42px;
+    }
 }
 
 .photosTitle:after{
@@ -908,4 +942,84 @@ ul {
 
 .flex-prev, .flex-next{
     outline: none;
+}
+
+///BACKOFFICE
+
+#loginPageContainer{
+    #loginContainer{
+        max-width: 400px;
+        margin-top: 20vh;
+        background-color: $color-lightgrey;
+        padding: 40px;
+        border-radius: 10px;
+        input{
+            margin: 6px 0px;
+        }
+
+        .btn{
+            width: 100%;
+            text-align: center;
+        }
+        h2{
+            text-align: center;
+        }
+    }
+    #contentContainer{
+        max-width: 800px;
+        margin-top: 20vh;
+        padding: 40px;
+        border-radius: 10px;
+        input{
+            margin: 12px 0px;
+        }
+
+        .btn{
+            float:right;
+        }
+        .return{
+            float:left;
+            padding: 16px;
+            outline: none;
+        }
+        .return:hover{
+            text-decoration: none;
+        }
+    }
+}
+
+#adminPageContainer{
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 20vh;
+}
+
+
+
+.navbar{
+    background-color: $color-green;
+    padding: 10px;
+    .btn.btn-link, .btn.btn-link:hover, a, a:hover {
+        color: #fff;
+        text-decoration: none;
+    }
+    i{
+        margin: 0px 12px;
+    }
+}
+
+.accordion i, .accordion-header{
+    cursor: pointer;
+}
+
+.accordion-body{
+    margin: 12px;
+    i{
+        margin-right: 12px;
+    }
+    a{
+        padding: 12px;
+        margin-left: 24px;
+        outline: none;
+    }
 }

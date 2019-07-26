@@ -4,8 +4,8 @@
 <script src="js/jquery.smoothState.js"></script>
 <script src="js/jquery.flexslider-min.js"></script>
 <script src="js/plugins.js"></script>
-<script src="js/main.js"></script>
 <script src="js/smooth.js"></script>
 <script src="js/owl.carousel.min.js"></script>
+<script src="js/main.js"></script>
 
     

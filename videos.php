@@ -53,7 +53,9 @@
     
 </div>
     <script>
+        if (window.innerWidth >= 568) {
         $('#mediaLink').addClass("active");
+      }
 
         $('.actusContent a').click(function () {
             $('.actusContent a').removeClass('activeMediaLink');
