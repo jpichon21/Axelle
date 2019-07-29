@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/flexslider.css">
     <link rel="stylesheet" href="css/lightcase.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/ratio.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
 

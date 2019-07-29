@@ -18,6 +18,7 @@ $dates = $date->fetch_all();
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/ratio.css">
     <meta name="theme-color" content="#fafafa">
     <script src="https://kit.fontawesome.com/6164dace53.js"></script>
 </head>
@@ -55,8 +56,9 @@ $dates = $date->fetch_all();
         $('#agendaLink').addClass("active");
     </script>
     <!--End bodyContainer-->
+    <?php include 'components/footer.php';?>
 </body>
-<?php include 'components/footer.php';?>
+
 
 
 </html>

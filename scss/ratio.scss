@@ -1,0 +1,12 @@
+@import '_include-media.scss';
+@import 'breakpoints.scss';
+
+// RESIZE
+body {
+    @include media('<=xxlarge', '>small') {
+        zoom: 85%
+    }
+    @include media('>=xxlarge') {
+        zoom: 100%
+    }
+}

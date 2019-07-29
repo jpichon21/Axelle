@@ -38,7 +38,7 @@ $articles = $article->fetch_all();
             <div id="arrowPlusPresse" ><img src="img/arrow-down.png"></div>
         </div>
     </div>
-   
+    <?php include 'components/footer.php';?>
 </div>
 
     <script>
@@ -47,9 +47,9 @@ $articles = $article->fetch_all();
       }
     </script>
     <!--End bodyContainer-->
+
 </body>
-<?php include 'components/footer.php';?>
+
 
 
 </html>
-<

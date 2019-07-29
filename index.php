@@ -49,8 +49,9 @@ $actualites = $actualite->fetch_all();
 
 </div>
 <!--End bodyContainer-->
-</body>
 <?php include 'components/footer.php';?>
+</body>
+
    
 
 </html>
