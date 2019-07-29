@@ -11,7 +11,7 @@ if (isset($_SESSION['logged_in'])) {
             $error = "Tous les champs sont requis !";
         } else {
             $pdo->query('SET NAMES utf8');
-            $query = $pdo->prepare('INSERT INTO dates (date_title, date_content) VALUES (?, ?)');
+            $query = $pdo->prepare('INSERT INTO articles (article_title, article_content) VALUES (?, ?)');
             $query->bindValue(1, $title);
             $query->bindValue(2, $content);
 
@@ -39,11 +39,11 @@ if (isset($_SESSION['logged_in'])) {
             <?php } ?>
             
             <div class="container" id="contentContainer">
-            <h2>Ajouter une Date</h2>
+            <h2>Ajouter un Extrait Presse</h2>
                 <div class="form-group column col-md-10 ">
-                    <form action="addDate.php" method="post"  autocomplete="off">
+                    <form action="addPress.php" method="post"  autocomplete="off">
                         <input class="form-input" type="text" name="title" placeholder="Titre"/>
-                        <textarea rows="3" class="form-input" name="content" placeholder="Description de la date"></textarea>
+                        <textarea rows="3" class="form-input" name="content" placeholder="Description de l'extrait presse"></textarea>
                         <input class="btn btn-primary input-group-btn" type="submit" value="Ajouter"/>
                         <a href="index.php" class="return">🡐 Retour</a>
                     </form>

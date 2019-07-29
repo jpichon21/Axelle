@@ -1,23 +1,23 @@
 <?php 
 session_start();
 include_once '../components/connection.php';
-include_once '../components/imports/date.php';
-$date = new Date;
+include_once '../components/imports/actualite.php';
+$actualite = new Actualite;
 
 if (isset($_SESSION['logged_in'])) {
 
     if (isset($_GET['id'])) {
         $id = $_GET['id'];
         $pdo->query('SET NAMES utf8');
-        $query = $pdo->prepare('DELETE from dates WHERE date_id = ?');
+        $query = $pdo->prepare('DELETE from actualites WHERE actualite_id = ?');
         $query->bindValue(1, $id);
         $query->execute();
 
-        $success = "La date a été supprimée avec succès !";
+        $success = "L'actualité a été supprimée avec succès !";
 
     }
     //display delete page
-    $dates = $date->fetch_all()
+    $actualites = $actualite->fetch_all()
 
     ?>
         <html>
@@ -35,19 +35,19 @@ if (isset($_SESSION['logged_in'])) {
         <div id="loginPageContainer">
             
             <div class="container" id="contentContainer">
-            <h2>Sélectionnez une Date à supprimer :</h2>
+            <h2>Sélectionnez une Actualité à supprimer :</h2>
 
             <?php if (isset($success)) { ?>
                 <p style="color:green;"><?php echo $success; ?></p>
             <?php } ?>
 
                 <div class="form-group column col-md-10 ">
-                    <form action="deleteDate.php" method="get" class="form-group">
+                    <form action="deleteActu.php" method="get" class="form-group">
                         <select  class="form-select" name="id">
-                        <option value="">Sélectionnez une date pour la supprimer </option>
-                            <?php foreach ($dates as $date) { ?>
-                                <option value="<?php echo $date['date_id']; ?>">
-                                    <?php echo $date['date_title'] ?>
+                        <option value="">Sélectionnez une actualité pour la supprimer </option>
+                            <?php foreach ($actualites as $actualite) { ?>
+                                <option value="<?php echo $actualite['actualite_id']; ?>">
+                                    <?php echo $actualite['actualite_tilte'] ?>
                                 </option>
                             <?php } ?>
                         </select>

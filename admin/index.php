@@ -41,10 +41,10 @@ if (isset($_SESSION['logged_in'])){
             Gérer mes Actualités
         </label>
         <div class="accordion-body">
-            <a href="addDate.php"><i class="icon icon-plus"></i>Ajouter une Actualité</a>
+            <a href="addActu.php"><i class="icon icon-plus"></i>Ajouter une Actualité</a>
         </div>
         <div class="accordion-body">
-            <a href="deleteDate.php"><i class="icon icon-delete"></i>Supprimer une Actualité</a>
+            <a href="deleteActu.php"><i class="icon icon-delete"></i>Supprimer une Actualité</a>
         </div>
     </div>
 
@@ -55,10 +55,10 @@ if (isset($_SESSION['logged_in'])){
             Gérer mes Extraits Presse
         </label>
         <div class="accordion-body">
-            <a href="addDate.php"><i class="icon icon-plus"></i>Ajouter un Extrait Presse</a>
+            <a href="addPress.php"><i class="icon icon-plus"></i>Ajouter un Extrait Presse</a>
         </div>
         <div class="accordion-body">
-            <a href="deleteDate.php"><i class="icon icon-delete"></i>Supprimer un Extrait Presse</a>
+            <a href="deletePress.php"><i class="icon icon-delete"></i>Supprimer un Extrait Presse</a>
         </div>
     </div>
 
