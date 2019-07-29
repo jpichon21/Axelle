@@ -163,6 +163,9 @@ ul {
 
 .SpecialContainer{
     width: 1530px!important;
+    @include media('<=small') {
+        width: 100% !important;
+    }
 }
 
 
@@ -446,6 +449,12 @@ ul {
     padding: 0px 0px 120px 0px;
     border-left: 12px solid $color-green;
     left: 200px;
+    @include media('<=small') {
+      width: 100%;
+      left: 0px;
+      position: relative;
+      border: none;
+    }
     #contactH2Container {
         background-image: url(../img/H2_CONTACT.png);
         background-size: contain;
@@ -455,6 +464,11 @@ ul {
         height: 248px;
         margin: 0 auto;
         padding-top: 125px;
+        @include media('<=small'){
+            height: 134px;
+            width: 100%;
+            padding-top: 25px;
+        }
     }
     h2 {
         font-family: 'Montserrat', sans-serif;
@@ -463,6 +477,9 @@ ul {
         text-align: center;
         text-transform: uppercase;
         font-size: 46px;
+        @include media('<=small') {
+            font-size: 38px;
+        }
     }
     ul,
     p {
@@ -473,6 +490,9 @@ ul {
         font-weight: 600;
         color: $color-midgrey;
         font-size: 23px;
+        @include media('<=small') {
+            font-size: 20px;
+        }
     }
     p,
     .infosSmall {
@@ -480,6 +500,9 @@ ul {
         font-weight: 200;
         font-size: 23px;
         margin-bottom: 24px;
+        @include media('<=small') {
+            font-size: 20px;
+        }
     }
 }
 
@@ -487,6 +510,17 @@ ul {
     position:absolute;
     right: 0px;
     top: 40px;
+    img {
+        @include media('<=small') {
+            width: 100%;
+        }
+    }
+    @include media('<=small') {
+    position: relative;
+    right: 0px;
+    top: 0px;
+    display: inline-block;
+    }
 }
 
 #bioGalleryWrapper{
@@ -497,6 +531,9 @@ ul {
         bottom: -36px;
         left: 50%;
         margin-left: -72px;
+        @include media('<small') {
+            display: none;
+        }
         img{
             width: 72px;
             height: 72px;
@@ -506,9 +543,21 @@ ul {
         li{
             display: inline-block; 
             margin-right: 10px;
+            @include media('<small') {
+                margin: 0px;
+                display: none;
+            }
+        }
+        li:first-of-type{
+            @include media('<small') {
+               display: inline-block;
+            }
         }
         img{
             width:490px;
+            @include media('<small') {
+                width: 100%;
+            }
         }
     }
 }
@@ -516,20 +565,32 @@ ul {
 #bioContentWrapper{
     #bioContent{
         margin-bottom: 64px;
+        @include media('<small') {
+            padding: 0px 12px;
+        }
     }
     p{
         font-family: 'Montserrat', sans-serif;
         font-size: 18px;
         line-height: 22px;
         color: $color-midgrey;
+        @include media('<small') {
+            font-size: 16px;
+        }
     }
     #titleWrapper{
         position: relative;
         text-align: center;
         margin: 48px 0px 48px 0px;
+        @include media('<small') {
+            margin: 24px 0px;
+        }
         .title{
             img{
                 margin-left: -32px;
+                    @include media('<small') {
+                        width: 272px;
+                    }
             }
         }
         h2{
@@ -542,6 +603,11 @@ ul {
             top: 32px;
             padding: 10px;
             border: 1px solid $color-lightgrey;
+            @include media('<small') {
+                position: relative;
+                right: 0;
+                top: -18px;
+            }
             img{
                 width: 32px;
                 margin-right: 12px;
@@ -572,7 +638,11 @@ ul {
             min-height: 300px;
         }
     }
-    
+    #actusVisibleList{
+        @include media('<small') {
+            padding: 14px;
+        }
+    }
     #datesContainer{
         width: 50%;
         float: right;
@@ -614,7 +684,7 @@ ul {
             max-width: 668px;
             margin: 0 auto;
             @include media('<=small') {
-                font-size: 18px;
+                font-size: 16px;
             }
         }
         #arrowPlus{
@@ -627,7 +697,7 @@ ul {
                 left: 0px;
                 margin-left: 0px;
                 position: relative;
-                margin: 32px auto;
+                margin: 42px auto;
                 width: 52px;
             }
             img{
@@ -723,7 +793,7 @@ ul {
             text-align: justify;
             line-height: 26px;
             @include media('<=small') {
-                font-size: 18px;
+                font-size: 16px;
                 padding: 25px;
             }
         }
@@ -756,7 +826,7 @@ ul {
         min-height: 800px;
     }
     #imageContainer{
-        width: 50%;
+        width: 48%;
         float: right;
         min-width: 400px;
         background-image: url('../img/contents/presse.jpg');

@@ -25,6 +25,7 @@ $( document ).ready(function() {
 
   // MOBILE MENU
   if (window.innerWidth <= 568) {
+    console.log('mobile détécté');
     $("#mainMenu").hide();
     $("#mobileToggle").show();
     $('#mobileToggle').on('click touch', function () {
