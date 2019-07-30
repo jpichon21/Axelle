@@ -62,7 +62,20 @@ if (isset($_SESSION['logged_in'])){
         </div>
     </div>
 
-
+    
+    <div class="accordion">
+    <input type="checkbox" id="accordion-4" name="accordion-checkbox" hidden>
+        <label class="accordion-header" for="accordion-4">
+            <i class="icon icon-arrow-right mr-1"></i>
+            Gérer ma Gallerie Photo
+        </label>
+        <div class="accordion-body">
+            <a href="addImage.php"><i class="icon icon-plus"></i>Ajouter une Photo</a>
+        </div>
+        <div class="accordion-body">
+            <a href="deletePress.php"><i class="icon icon-delete"></i>Supprimer un Extrait Presse</a>
+        </div>
+    </div>
 
   
        
