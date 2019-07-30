@@ -70,10 +70,16 @@ if (isset($_SESSION['logged_in'])){
             Gérer ma Gallerie Photo
         </label>
         <div class="accordion-body">
-            <a href="addImage.php"><i class="icon icon-plus"></i>Ajouter une Photo</a>
+            <a href="addStudioImage.php"><i class="icon icon-plus"></i>Ajouter une Photo Studio</a>
         </div>
         <div class="accordion-body">
-            <a href="deletePress.php"><i class="icon icon-delete"></i>Supprimer un Extrait Presse</a>
+            <a href="addSceneImage.php"><i class="icon icon-plus"></i>Ajouter une Photo Scene</a>
+        </div>
+        <div class="accordion-body">
+            <a href="deleteStudioImage.php"><i class="icon icon-delete"></i>Supprimer une Photo Studio</a>
+        </div>
+        <div class="accordion-body">
+            <a href="deleteSceneImage.php"><i class="icon icon-delete"></i>Supprimer une Photo Scene</a>
         </div>
     </div>
 

@@ -1,3 +1,12 @@
+<?php 
+include_once 'components/connection.php';
+include_once 'components/imports/studio.php';
+include_once 'components/imports/scene.php';
+$studio = new Studio;
+$studios = $studio->fetch_all();
+$scene = new Scene;
+$scenes = $scene->fetch_all();
+?>
 <!doctype html>
 <html class="no-js" lang="">
 
@@ -15,19 +24,18 @@
     <div id="photosGalleryContainer">
     <h2 class="photosTitle">Studio</h2>
     <div class="flexslider" id="photosCarousel1">
-		<ul class="slides">
-			<li><a data-rel="lightcase" href="img/contents/sliders/studio/image-1.jpg"><img src="img/contents/sliders/studio/thumbs/image-1.jpg" /></a></li>
-            <li><a data-rel="lightcase" href="img/contents/sliders/studio/image-2.jpg"><img src="img/contents/sliders/studio/thumbs/image-2.jpg" /></a></li>
-            <li><a data-rel="lightcase" href="img/contents/sliders/studio/image-3.jpg"><img src="img/contents/sliders/studio/thumbs/image-3.jpg" /></a></li>
-		</ul>
+        <ul class="slides">
+            <?php foreach ($studios as $studio) { ?>
+                    <li><a data-rel="lightcase" href="img/contents/sliders/studio/<?php echo $studio['image_content'];?>"><img src="img/contents/sliders/studio/thumbs/<?php echo $studio['image_thumbnail'];?>" alt="<?php echo $studio['image_alt'];?>"/></a></li>
+            <?php } ?>
+        </ul>
 	</div>
     <h2 class="photosTitle">Scène</h2>
     <div class="flexslider" id="photosCarousel2">
 		<ul class="slides">
-			<li><a data-rel="lightcase" href="img/contents/sliders/scene/image-1.jpg"><img src="img/contents/sliders/scene/thumbs/image-1.jpg" /></a></li>
-            <li><a data-rel="lightcase" href="img/contents/sliders/scene/image-2.jpg"><img src="img/contents/sliders/scene/thumbs/image-2.jpg" /></a></li>
-            <li><a data-rel="lightcase" href="img/contents/sliders/scene/image-3.jpg"><img src="img/contents/sliders/scene/thumbs/image-3.jpg" /></a></li>
-            <li><a data-rel="lightcase" href="img/contents/sliders/scene/image-4.jpg"><img src="img/contents/sliders/scene/thumbs/image-4.jpg" /></a></li>
+            <?php foreach ($scenes as $scene) { ?>
+                    <li><a data-rel="lightcase" href="img/contents/sliders/scene/<?php echo $scene['image_content'];?>"><img src="img/contents/sliders/scene/thumbs/<?php echo $scene['image_thumbnail'];?>" alt="<?php echo $scene['image_alt'];?>"/></a></li>
+            <?php } ?>
 		</ul>
 	</div>
       
