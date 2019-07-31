@@ -24,14 +24,17 @@ $( document ).ready(function() {
   }
 
   // MOBILE MENU
-  if (window.innerWidth <= 568) {
-    console.log('mobile détécté');
-    $("#mainMenu").hide();
-    $("#mobileToggle").show();
-    $('#mobileToggle').on('click touch', function () {
-      $('#mainMenu').toggle();
-    });
-}
+  window.onresize = checkMenu();
+  function checkMenu() {
+    console.log('resizing');
+    if (window.innerWidth <= 568) {
+      $("#mainMenu").hide();
+      $("#mobileToggle").show();
+      $('#mobileToggle').on('click touch', function () {
+        $('#mainMenu').toggle();
+      });
+    }
+  }
 
   // SMOOTH SCROLL 
     var positionY = 0;

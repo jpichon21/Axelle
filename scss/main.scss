@@ -141,6 +141,9 @@ ul {
     margin: 0 auto;
     background-color: white;
     margin-bottom: 32px;
+    @include media('<=large','>small') {
+        min-height: 1136px
+    }
     @include media('<large') {
         width: 768px;
     }
@@ -163,8 +166,10 @@ ul {
 
 .SpecialContainer{
     width: 1530px!important;
-    @include media('<=small') {
-        width: 100% !important;
+    @include media('<=large') {
+        max-width: 100%!important;
+        min-width: 100%!important;
+        width: 100%!important;
     }
 }
 
@@ -179,7 +184,11 @@ ul {
         position: absolute!important;
         right: -282px;
         top: 50px;
-        @include media('<medium') {
+        @include media('<=large','>small') {
+            top: 50px;
+            right: 25px;
+        }
+        @include media('<=small') {
             display: none;
         }
         .sociallinks{
@@ -198,7 +207,7 @@ ul {
     margin: 0 auto;
     height: 300px;
     @include media('<large') {
-        width: 568px;
+        width: 798px;
     }
     @include media('<medium') {
         width: 90%;
@@ -237,7 +246,7 @@ ul {
             height: 80px;
             padding: 25px 0px;
             display: flex;
-            flex-wrap: wrap;
+            //flex-wrap: wrap;
             @include media('<=small') {
                 padding: 0px;
                 min-width: 320px;
@@ -449,7 +458,11 @@ ul {
     padding: 0px 0px 120px 0px;
     border-left: 12px solid $color-green;
     left: 200px;
-    @include media('<=small') {
+    @include media('<=large','>small') {
+        width: 837px;
+        margin: 0 auto;
+    }
+    @include media('<small') {
       width: 100%;
       left: 0px;
       position: relative;
@@ -515,6 +528,11 @@ ul {
             width: 100%;
         }
     }
+    @include media('<=large') {
+        position: relative;
+        width: 637px;
+        margin: 0 auto;
+    }
     @include media('<=small') {
     position: relative;
     right: 0px;
@@ -543,19 +561,19 @@ ul {
         li{
             display: inline-block; 
             margin-right: 10px;
-            @include media('<small') {
+            @include media('<=large') {
                 margin: 0px;
                 display: none;
             }
         }
         li:first-of-type{
-            @include media('<small') {
+            @include media('<=large') {
                display: inline-block;
             }
         }
         img{
             width:490px;
-            @include media('<small') {
+            @include media('<=large') {
                 width: 100%;
             }
         }
@@ -565,6 +583,9 @@ ul {
 #bioContentWrapper{
     #bioContent{
         margin-bottom: 64px;
+        @include media('<=large','>small') {
+            padding: 25px;
+        }
         @include media('<small') {
             padding: 0px 12px;
         }
@@ -574,6 +595,9 @@ ul {
         font-size: 18px;
         line-height: 22px;
         color: $color-midgrey;
+        @include media('<=large','>small') {
+          font-size: 22px;
+        }
         @include media('<small') {
             font-size: 16px;
         }
@@ -603,6 +627,11 @@ ul {
             top: 32px;
             padding: 10px;
             border: 1px solid $color-lightgrey;
+            @include media('<=large','>small') {
+                top: 152px;
+                left: 0;
+                right: 0;
+            }
             @include media('<small') {
                 position: relative;
                 right: 0;
@@ -650,14 +679,20 @@ ul {
         background-color: $color-orange;
         height: 100vh;
         position: relative;
-        @include media('<=small') {
-                position: relative;
-                float: none;
-                display: inline-block;
-                width: 100%;
-                max-width: 100%;
+        @include media('<=large','>small') {
+            margin-top: -3px;
+        }
+        @include media('<=large') {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            max-width: 100%;
+            min-width: 300px;
+            height: 100%;
+        }
+        @include media('<=small') { 
                 height: 408px;
-                min-width: 300px;
+                float: right;
         }
         p, h3{
             text-align: center;
@@ -722,7 +757,14 @@ ul {
         height: 100%;
         background-size: cover;
         background-repeat: no-repeat;
-        @include media('<=small') {
+        @include media('<=large','>small') {
+            float:none;
+            display: inline-block;
+            width: 100%;
+
+        }
+
+        @include media('<small') {
             width: 100%;
             float: none;
             min-width: 100%;
@@ -759,10 +801,12 @@ ul {
         background-color: $color-bluegrey;
         height: 100vh;
         position: relative;
-        @include media('<=small') {
+        @include media('<=large','>small') {
             width: 100%;
-            float: none;
             min-width: 100%;
+        }
+        @include media('<=small') {
+            float: none;
             max-height: 442px;
             position: relative;
             display: inline-block;
@@ -792,6 +836,11 @@ ul {
             padding: 25px 80px;
             text-align: justify;
             line-height: 26px;
+            @include media('<=large','>small') {
+            font-size: 26px;
+            padding: 25px 50px;
+            line-height: 31px;
+            }
             @include media('<=small') {
                 font-size: 16px;
                 padding: 25px;
@@ -833,10 +882,12 @@ ul {
         height: 100%;
         background-size: cover;
         background-repeat: no-repeat;
-        @include media('<=small') {
+        @include media('<=large','>small') {
             width: 100%;
             display: inline-block;
             min-width: 100%;
+        }
+        @include media('<=small') {
             height: 50%;
         }
     }
@@ -848,7 +899,7 @@ ul {
     margin-bottom: 0px!important;
     .stop-scrolling {
         overflow: hidden!important;
-        @include media('<=small') {
+        @include media('<=large') {
             overflow: auto!important;
         }
     }
@@ -914,7 +965,12 @@ ul {
         background-color: $color-lightgrey;
         height: 668px;
         position: relative;
+        @include media('<=large','>small') {
+            display: inline-block;
+            min-width: 100%;
+        }
         @include media('<=small') {
+            float: right;
             min-width: 100%;
         }
         @include media('<medium') {
@@ -981,7 +1037,7 @@ ul {
         width: 1640px;
         max-width: 1640px;
         margin: 0 auto;
-        @include media('<=small') {
+        @include media('<=large') {
             width: 100%;
             min-width: 300px;
             max-width: 100%;
@@ -993,16 +1049,25 @@ ul {
                 max-height: 300px;
             }
         }
+        .owl-nav:hover{
+            opacity: 1;
+            transition: 0.5s ease;
+        }
         .owl-nav{
             position: absolute;
             top: 0px;
-            font-size: 232px;
+            font-size: 72px;
             width: 100%;
             top: 96px;
-        @include media('<=small') {
+            opacity: 0.4;
+            top: 67%;
+            transition: 0.5s ease;
+        @include media('<=large') {
             position: fixed;
-            margin: 0 auto;
-            font-size: 72px;
+            top: 60%;
+
+        }
+        @include media('<=small') {
             width: 100%;
             top: 424px;
         }
@@ -1013,6 +1078,18 @@ ul {
             .owl-next, .owl-prev{
                 color: $color-green;
                 outline: none!important;
+                background-color: #fff;
+                @include media('<=xxlarge','>large') {
+                width: 72px;
+                height: 96px;
+                }
+                @include media('<=large','>small') {
+                    width: 100px;
+                    height: 100px;
+                }
+                @include media('<=small') {
+                    background: none;
+                }
                  span{
                     outline: none!important;
                 }
@@ -1032,14 +1109,16 @@ ul {
             min-height: 620px;
             max-width: 852px;
             width: 52%;
-        @include media('<=small') {
-            float: none;
-            width: 100%;
-            min-width: 300px;
-            margin: 0 auto;
-            min-height: 100px;
-            height: auto;
-        }
+            @include media('<large') {
+                max-width: 100%;
+                float: none;
+                display: inline-block;
+                width: 100%!important;
+                min-width: 300px;
+                margin: 0 auto;
+                min-height: 100px;
+                height: auto;
+            }
             img{
                 width: 100%;
                 height: auto;
@@ -1051,7 +1130,7 @@ ul {
             height: 515px;
             border-right: 1px solid $color-lightgreen;
             border-collapse: collapse;
-            @include media('<=small') {
+            @include media('<=large') {
                 display:none;
             }
         }
@@ -1061,7 +1140,7 @@ ul {
             max-height: 515px;
             height: 515px;
             width: 717px;
-            @include media('<=small') {
+            @include media('<=large') {
                 float: none;
                 display: inline-block;
                 min-width: 100%;
@@ -1075,6 +1154,10 @@ ul {
                     font-size: 16px;
                     line-height: 26px;
                     font-weight: 300;
+                    @include media('<=large','>small') { 
+                        font-size: 20px;
+                        line-height: 30px;
+                    }
                 }
             }
             h2{
@@ -1094,7 +1177,7 @@ ul {
         height: 100%;
         background-size: cover;
         background-repeat: no-repeat;
-        @include media('<medium') {
+        @include media('<=large') {
             width: 100%;
             min-width: 100%;
         }
