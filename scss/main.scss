@@ -1198,17 +1198,17 @@ ul {
     font-size: 52px;
     font-weight: 400;
     color: $color-pink;
+    width: 152px;
+    margin: 0 auto;
+    border-bottom: 1px solid $color-pink;
+    margin-bottom: 42px;
+    margin-top: 43px;
     @include media('<medium') {
-        margin: 12px;
+        margin: 0 auto;
+        margin-top: 12px;
+        margin-bottom: 12px;
         font-size: 42px;
     }
-}
-
-.photosTitle:after{
-    content: "______";
-    margin-top: -46px;
-    color: $color-pink;
-    display: block;
 }
 
 .flex-prev, .flex-next{
