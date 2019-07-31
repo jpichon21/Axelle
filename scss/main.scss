@@ -534,6 +534,7 @@ ul {
         margin: 0 auto;
     }
     @include media('<=small') {
+    width: 100%;
     position: relative;
     right: 0px;
     top: 0px;
@@ -801,7 +802,7 @@ ul {
         background-color: $color-bluegrey;
         height: 100vh;
         position: relative;
-        @include media('<=large','>small') {
+        @include media('<=large') {
             width: 100%;
             min-width: 100%;
         }
