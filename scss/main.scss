@@ -150,9 +150,6 @@ ul {
         min-height: 1136px
     }
     @include media('<large') {
-        width: 768px;
-    }
-    @include media('<medium') {
         width: 100%;
     }
     @include media('<=small') {
@@ -214,10 +211,7 @@ ul {
     @include media('<large') {
         width: 798px;
     }
-    @include media('<medium') {
-        width: 90%;
-    }
-    @include media('<=small') {
+    @include media('<=tablet') {
         width: 100%;
         display: block;
         height: auto;
@@ -228,13 +222,15 @@ ul {
         height: 220px;
         width: 100%;
         background-color: white;
-        @include media('<=small') {
-            height: 94px;
-            display: block;
+        @include media('<=tablet') {
             img {
                 min-width: 320px;
                 width: 100%;
             }
+        }
+        @include media('<=small') {
+            height: 94px;
+            display: block;
         }
     }
     nav {
@@ -242,7 +238,7 @@ ul {
         .active {
             font-weight: 600;
             color: $color-green;
-            @include media('<=small') {
+            @include media('<=tablet') {
                 color: #fff;
             }
         }
@@ -252,7 +248,7 @@ ul {
             padding: 25px 0px;
             display: flex;
             //flex-wrap: wrap;
-            @include media('<=small') {
+            @include media('<=tablet') {
                 padding: 0px;
                 min-width: 320px;
                 width: 100%;
@@ -263,7 +259,7 @@ ul {
             li {
                 flex: 1 1 100px;
                 text-align: center;
-                @include media('<=small') {
+                @include media('<=tablet') {
                     display: inline-block;
                     width: 100%;
                     margin: 0px;
@@ -271,13 +267,13 @@ ul {
                 }
             }
             li:hover {
-                @include media('<=small') {
+                @include media('<=tablet') {
                     background-color: $color-red;
                     transition: 1s ease;
                 }
             }
             li:not(:nth-child(4)) {
-                @include media('<=small') {
+                @include media('<=tablet') {
                     border-bottom: 1px solid #ffffff17;
                 }
             }
@@ -285,7 +281,7 @@ ul {
                 content: '|';
                 margin: 0px 40px;
                 vertical-align: text-bottom;
-                @include media('<=small') {
+                @include media('<=tablet') {
                     display: none;
                 }
             }
@@ -296,7 +292,7 @@ ul {
                 font-weight: 300;
                 color: $color-midgrey;
                 text-transform: uppercase;
-                @include media('<=small') {
+                @include media('<=tablet') {
                     font-size: 16px;
                     color: #ffffff;
                 }

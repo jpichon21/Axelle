@@ -27,7 +27,7 @@ $( document ).ready(function() {
   window.onresize = checkMenu();
   function checkMenu() {
     console.log('resizing');
-    if (window.innerWidth <= 568) {
+    if (window.innerWidth <= 800) {
       $("#mainMenu").hide();
       $("#mobileToggle").show();
       $('#mobileToggle').on('click touch', function () {
