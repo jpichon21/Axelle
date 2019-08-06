@@ -333,6 +333,9 @@ ul {
         font-family: "Baskerville Old";
         color: $color-red;
         z-index: 2;
+        a, a:hover, a:active, a:focus, a:visited{
+            color: $color-red;
+        }
         @include media('<=small') {
             height: 100%;
         }
@@ -653,15 +656,16 @@ ul {
 .agendaFullWidthContainer{
     margin-bottom: 0px!important;
     .stop-scrolling {
-        overflow: hidden!important;
-        @include media('<=small') {
-            overflow: auto!important;
+        //overflow: hidden!important;
+            overflow-y: auto!important;
+        @include media('<=tablet') {
+            overflow-y: auto!important;
         }
     }
     #Actus{
         margin-top: 72px;
-        overflow: scroll;
         overflow-x: hidden;
+        width: 102%;
         min-height: 600px;
         max-height: 74%;
         @include media('<=small') {
@@ -681,6 +685,7 @@ ul {
         background-color: $color-orange;
         height: 100vh;
         position: relative;
+        overflow: hidden;
         @include media('<=large','>small') {
             margin-top: -3px;
         }
@@ -729,7 +734,30 @@ ul {
             position: absolute;
             bottom: 36px;
             left: 50%;
-            margin-left: -72px;
+            margin-left: -42px;
+            @include media('<=small') {
+                left: 0px;
+                margin-left: 0px;
+                position: relative;
+                margin: 42px auto;
+                width: 52px;
+            }
+            img{
+                width: 72px;
+                height: 72px;
+                @include media('<small') {
+                    width: 52px;
+                    height: 52px;
+                 }
+            }
+        }
+        #arrowLess{
+            display: none;
+            cursor: pointer;
+            position: absolute;
+            top: 6px;
+            left: 50%;
+            margin-left: -42px;
             @include media('<=small') {
                 left: 0px;
                 margin-left: 0px;
@@ -779,9 +807,10 @@ ul {
 .presseFullWidthContainer{
     margin-bottom: 0px!important;
     .stop-scrolling {
-        overflow: hidden!important;
-        @include media('<=small') {
-            overflow: auto!important;
+        //overflow: hidden!important;
+            overflow-y: auto!important;
+        @include media('<=tablet') {
+            overflow-y: auto!important;
         }
     }
     #Actus{
@@ -790,6 +819,7 @@ ul {
         overflow-x: hidden;
         min-height: 600px;
         max-height: 74%;
+        width: 102%;
         @include media('<=small') {
             margin-top: 12px;
             min-height: 300px;
@@ -803,6 +833,7 @@ ul {
         background-color: $color-bluegrey;
         height: 100vh;
         position: relative;
+        overflow: hidden;
         @include media('<=large') {
             width: 100%;
             min-width: 100%;
@@ -877,7 +908,7 @@ ul {
         min-height: 800px;
     }
     #imageContainer{
-        width: 48%;
+        width: 50%;
         float: right;
         min-width: 400px;
         background-image: url('../img/contents/presse.jpg');
@@ -1081,7 +1112,7 @@ ul {
                 color: $color-green;
                 outline: none!important;
                 background-color: #fff;
-                @include media('<=xxlarge','>large') {
+                @include media('>large') {
                 width: 72px;
                 height: 96px;
                 }
@@ -1304,3 +1335,25 @@ ul {
     width: 100%;
     display: inline-block;
 }
+
+
+//LIGHTCASE
+/*
+#lightcase-case{
+        opacity: 1;
+        display: block;
+        max-width: 100%!important;
+        margin-top: -353px!important;
+        margin-left: -286px!important;
+}
+
+.lightcase-contentInner{
+    opacity: 1;
+    width: 100%;
+    height: auto!important;
+    max-width: 100%!important;
+    img{
+        max-width: 1280px!important;
+        max-height:auto!important;
+    }
+}*/

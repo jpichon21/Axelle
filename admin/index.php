@@ -62,6 +62,19 @@ if (isset($_SESSION['logged_in'])){
         </div>
     </div>
 
+    <div class="accordion">
+    <input type="checkbox" id="accordion-5" name="accordion-checkbox" hidden>
+        <label class="accordion-header" for="accordion-5">
+            <i class="icon icon-arrow-right mr-1"></i>
+            Gérer mes Vidéos
+        </label>
+        <div class="accordion-body">
+            <a href="addVideo.php"><i class="icon icon-plus"></i>Ajouter une Vidéo</a>
+        </div>
+        <div class="accordion-body">
+            <a href="deleteVideo.php"><i class="icon icon-delete"></i>Supprimer une Vidéo</a>
+        </div>
+    </div>
     
     <div class="accordion">
     <input type="checkbox" id="accordion-4" name="accordion-checkbox" hidden>
@@ -83,7 +96,6 @@ if (isset($_SESSION['logged_in'])){
         </div>
     </div>
 
-  
        
     </div>
     <body>

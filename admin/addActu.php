@@ -6,14 +6,16 @@ if (isset($_SESSION['logged_in'])) {
     if (isset($_POST['title'], $_POST['content'])) {
         $title = $_POST['title'];
         $content = $_POST['content'];
+        $link = $_POST['link'];
 
         if (empty($title) or empty($content)){
             $error = "Tous les champs sont requis !";
         } else {
             $pdo->query('SET NAMES utf8');
-            $query = $pdo->prepare('INSERT INTO actualites (actualite_tilte, actualite_content) VALUES (?, ?)');
+            $query = $pdo->prepare('INSERT INTO actualites (actualite_tilte, actualite_content, actualite_link) VALUES (?, ?, ?)');
             $query->bindValue(1, $title);
             $query->bindValue(2, $content);
+            $query->bindValue(3, $link);
 
             $query->execute();
 
@@ -43,6 +45,7 @@ if (isset($_SESSION['logged_in'])) {
                 <div class="form-group column col-md-10 ">
                     <form action="addActu.php" method="post"  autocomplete="off">
                         <input class="form-input" type="text" name="title" placeholder="Titre"/>
+                        <input class="form-input" type="text" name="link" placeholder="Lien de l'évènement"/>
                         <textarea rows="3" class="form-input" name="content" placeholder="Description de l'actualité"></textarea>
                         <input class="btn btn-primary input-group-btn" type="submit" value="Ajouter"/>
                         <a href="index.php" class="return">🡐 Retour</a>

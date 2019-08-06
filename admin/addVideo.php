@@ -3,19 +3,19 @@ session_start();
 include_once '../components/connection.php';
 
 if (isset($_SESSION['logged_in'])) {
-    if (isset($_POST['title'], $_POST['content'])) {
+    if (isset($_POST['title'], $_POST['content'], $_POST['description'])){
         $title = $_POST['title'];
         $content = $_POST['content'];
-        $link = $_POST['link'];
+        $description = $_POST['description'];
 
         if (empty($title) or empty($content)){
             $error = "Tous les champs sont requis !";
         } else {
             $pdo->query('SET NAMES utf8');
-            $query = $pdo->prepare('INSERT INTO dates (date_title, date_content, date_link) VALUES (?, ?, ?)');
+            $query = $pdo->prepare('INSERT INTO videos (videos_title, videos_content, videos_description) VALUES (?, ?, ?)');
             $query->bindValue(1, $title);
             $query->bindValue(2, $content);
-            $query->bindValue(3, $link);
+            $query->bindValue(3, $description);
 
             $query->execute();
 
@@ -41,12 +41,12 @@ if (isset($_SESSION['logged_in'])) {
             <?php } ?>
             
             <div class="container" id="contentContainer">
-            <h2>Ajouter une Date</h2>
+            <h2>Ajouter une vidéo</h2>
                 <div class="form-group column col-md-10 ">
-                    <form action="addDate.php" method="post"  autocomplete="off">
-                        <input class="form-input" type="text" name="title" placeholder="Titre"/>
-                        <input class="form-input" type="text" name="link" placeholder="Lien de l'évènement"/>
-                        <textarea rows="3" class="form-input" name="content" placeholder="Description de la date"></textarea>
+                    <form action="addVideo.php" method="post"  autocomplete="off">
+                        <input class="form-input" type="text" name="title" placeholder="Titre de la vidéo"/>
+                        <input class="form-input" type="text" name="content" placeholder="Lien de la vidéo"/>
+                        <textarea rows="3" class="form-input" name="description" placeholder="Description de la vidéo"></textarea>
                         <input class="btn btn-primary input-group-btn" type="submit" value="Ajouter"/>
                         <a href="index.php" class="return">🡐 Retour</a>
                     </form>

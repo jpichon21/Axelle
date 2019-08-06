@@ -35,10 +35,14 @@ $actualites = $actualite->fetch_all();
         <h2>Actualités</h2>
         <div class="separator"></div>
         <?php foreach ($actualites as $actualite) { ?>
+        <?php if (isset($actualite['actualite_link']) AND !empty($actualite['actualite_link'])) { ?>
+        <a href="<?php echo $actualite['actualite_link'];  ?>" target="blank" alt="<?php echo $actualite['actualite_tilte'];  ?>"> 
+        <?php } ?>
           <div class="actusContent">
             <h3><?php echo $actualite['actualite_tilte'];  ?></h3>
             <p><?php echo $actualite['actualite_content'];  ?></p>
           </div>
+        </a>
         <?php } ?>
         
       </div>

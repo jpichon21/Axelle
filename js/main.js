@@ -5,7 +5,7 @@ $( document ).ready(function() {
   var isActuClosed = false;
   
   $('#closeActus').click (function (e){
-    e.preventDefault();
+    //e.preventDefault();
     $('#actusContainer').fadeOut('fast');
     setTimeout(setActusClose, 300);
   });
@@ -15,7 +15,7 @@ $( document ).ready(function() {
       $('#actusContainer').fadeIn('fast');
       isActuClosed = false;
     } else {
-      return false;
+      //return false;
     }
   });
 
@@ -38,6 +38,7 @@ $( document ).ready(function() {
 
   // SMOOTH SCROLL 
     var positionY = 0;
+    var positionZ = 0;
 
     $('#arrowDown').on('click', function() {
       scrollTo( $("#bioContent") );
@@ -47,6 +48,13 @@ $( document ).ready(function() {
       positionY += 200;
       $('#Actus').animate({scrollTop: positionY}, 800);
     });
+
+    $('#arrowLess').on('click', function() {
+      console.log('test');
+      positionY -= 200;
+      $('#Actus').animate({scrollTop: positionY}, 800);
+    });
+
 
     $('#arrowPlusPresse').on('click', function() {
       positionY += 400;

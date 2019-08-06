@@ -36,10 +36,14 @@ $dates = $date->fetch_all();
             <ul id="actusVisibleList">
         <?php foreach ($dates as $date) { ?>
             <li>
+            <?php if (isset($date['date_link']) AND !empty($date['date_link'])) { ?>
+            <a href="<?php echo $date['date_link'];  ?>" target="blank" alt="<?php echo $date['date_title'];  ?>"> 
+            <?php } ?>
                 <div class="actusContent">
                     <h3><?php echo $date['date_title'];  ?></h3>
                     <p><?php echo $date['date_content']; ?></p>
                  </div>
+            </a>
             </li>
         <?php } ?>
 
