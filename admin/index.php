@@ -21,6 +21,20 @@ if (isset($_SESSION['logged_in'])){
     <h1>Bienvenue sur l'Interface Administrateur </h1>
 
     <div class="accordion">
+    <input type="checkbox" id="accordion-0" name="accordion-checkbox" hidden>
+        <label class="accordion-header" for="accordion-0">
+            <i class="icon icon-arrow-right mr-1"></i>
+            Gérer ma Biographie
+        </label>
+        <div class="accordion-body">
+            <a href="editBioFR.php"><i class="icon icon-plus"></i>Modifier la biographie FR</a>
+        </div>
+        <div class="accordion-body">
+            <a href="editBioEN.php"><i class="icon icon-delete"></i>Modifier la biographie EN</a>
+        </div>
+    </div>
+
+    <div class="accordion">
     <input type="checkbox" id="accordion-1" name="accordion-checkbox" hidden>
         <label class="accordion-header" for="accordion-1">
             <i class="icon icon-arrow-right mr-1"></i>
