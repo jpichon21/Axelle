@@ -26,11 +26,11 @@
                     <p>Mark Kendall Artists Management</p>
                     <ul>
                         <li>Mark Kendall (World)</li>
-                        <li class="infosSmall">markkendallartists@mac.com</li>
+                        <li class="infosSmall"><a href="mailto:markkendallartists@mac.com">markkendallartists@mac.com</a></li>
                         <li>Guy Flechter (France)</li>
-                        <li class="infosSmall">guy.markkendallartists@orange.fr</li>
+                        <li class="infosSmall"><a href="mailto:guy.markkendallartists@orange.fr">guy.markkendallartists@orange.fr</a></li>
                         <li>Contact personnel :</li>
-                        <li class="infosSmall">axellefanyo89@gmail.com</li>
+                        <li class="infosSmall"><a href="mailto:axellefanyo89@gmail.com">axellefanyo89@gmail.com</a></li>
                     </ul>
                 </div>
             </div>

@@ -502,13 +502,16 @@ ul {
     p {
         text-align: center;
     }
-    li {
+    li{
         font-family: 'Montserrat', sans-serif;
         font-weight: 600;
         color: $color-midgrey;
         font-size: 23px;
         @include media('<=small') {
             font-size: 20px;
+        }
+        a, a:hover, a:active, a:focus, a:visited {
+            color: $color-midgrey;
         }
     }
     p,
@@ -684,6 +687,7 @@ ul {
         min-width: 400px;
         background-color: $color-orange;
         height: 100vh;
+        min-height: 100%;
         position: relative;
         overflow: hidden;
         @include media('<=large','>small') {
@@ -832,6 +836,7 @@ ul {
         min-width: 400px;
         background-color: $color-bluegrey;
         height: 100vh;
+        min-height: 100%;
         position: relative;
         overflow: hidden;
         @include media('<=large') {

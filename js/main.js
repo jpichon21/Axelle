@@ -1,3 +1,8 @@
+window.onload = function() {
+  $('#actusContainer').css('display','none');
+    setTimeout(function(){$('#actusContainer').fadeIn('slow');}, 2000);
+}
+
 $( document ).ready(function() {
   $(".en").hide();
 
@@ -18,6 +23,7 @@ $( document ).ready(function() {
       //return false;
     }
   });
+
 
   function setActusClose(){
     isActuClosed = true;
