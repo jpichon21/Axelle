@@ -30,7 +30,7 @@ if (isset($_SESSION['logged_in'])){
             <a href="editBioFR.php"><i class="icon icon-plus"></i>Modifier la biographie FR</a>
         </div>
         <div class="accordion-body">
-            <a href="editBioEN.php"><i class="icon icon-delete"></i>Modifier la biographie EN</a>
+            <a href="editBioEN.php"><i class="icon icon-plus"></i>Modifier la biographie EN</a>
         </div>
     </div>
 
