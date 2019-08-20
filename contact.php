@@ -15,7 +15,7 @@
         <div id="contactWrapper">
             <div id="contactImageContainer">
                     <div id="contactImage">
-                        <a data-rel="lightcase" href="img/CONTACT_AXELLE.jpg"><img src="img/CONTACT_AXELLE.jpg"></a>
+                        <a data-rel="lightcase" href="img/CONTACT_AXELLE.jpg"><img src="img/CONTACT_AXELLE.jpg" alt="Portrait d'Axelle Fanyo | Crédit : Capucine de Chocqueuse"></a>
                     </div>
             </div>
             <div id="contactInfosContainer">
@@ -43,7 +43,4 @@
     <!--End bodyContainer-->
 </body>
 <?php include 'components/footer.php';?>
-
-
 </html>
-<

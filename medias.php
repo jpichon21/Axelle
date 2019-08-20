@@ -32,7 +32,7 @@
                 <a href="presse.php">Presse</a>
             </div>
             </li>
-            <span id="actusEnd"></span>
+            <li id="actusEnd"></li>
         </ul>
         </div>
         

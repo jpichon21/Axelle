@@ -41,20 +41,22 @@ $dates = $date->fetch_all();
         ?>
             <li>
             <?php if (isset($date['date_link']) AND !empty($date['date_link'])) { ?>
-            <a href="<?php echo $date['date_link'];  ?>" target="blank" alt="<?php echo $date['date_title'];  ?>"> 
+            <a href="<?php echo $date['date_link'];  ?>" target="blank"> 
             <?php } ?>
                 <div class="actusContent">
                     <h3><?php echo $date['date_title'];  ?></h3>
                     <p><?php echo $newDate;  ?><br><?php echo $date['date_content']; ?></p>
                  </div>
+            <?php if (isset($date['date_link']) AND !empty($date['date_link'])) { ?>
             </a>
+            <?php } ?>
             </li>
         <?php } ?>
 
-            <span id="actusEnd"></span>
+            <li id="actusEnd"></li>
         </ul>
         </div>
-        <div id="arrowPlus" ><img src="img/arrow-down.png"></div>
+        <div id="arrowPlus" ><img src="img/arrow-down.png" alt="fleche vers le bas"></div>
         </div>
     </div>
    

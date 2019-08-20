@@ -203,7 +203,6 @@ ul {
         .sociallinks:first-of-type{
             margin-right: 4px;
         }
- 
     }
     width: 810px;
     margin: 0 auto;
@@ -410,7 +409,7 @@ ul {
         position: relative;
         bottom: 0px;
     }
-    #socialContainer {
+    #socialContainer, #socialContainerFooter {
         margin: 0px 142px;
         padding: 22px 0px;
         @include media('<=small') {

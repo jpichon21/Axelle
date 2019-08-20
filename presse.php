@@ -32,10 +32,10 @@ $articles = $article->fetch_all();
                     </div>
                 </li>
             <?php } ?>
-                <span id="actusEnd"></span>
+                <li id="actusEnd"></li>
             </ul>
             </div>
-            <div id="arrowPlusPresse" ><img src="img/arrow-down.png"></div>
+            <div id="arrowPlusPresse" ><img src="img/arrow-down.png" alt="fleche vers le bas"></div>
         </div>
     </div>
     <?php include 'components/footer.php';?>

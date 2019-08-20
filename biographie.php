@@ -13,7 +13,6 @@ $biographys = $biography->fetch_all();
 <html class="no-js" lang="">
 
 <head>
-<head>
     <?php include 'components/head.php';?>
 </head>
 
@@ -25,10 +24,10 @@ $biographys = $biography->fetch_all();
 
         <div id="bioGalleryWrapper">
             <ul>
-                <div id="arrowDown" class="arrow"><img src="img/arrow-down.png"></div>
-                <li><a data-rel="lightcase" href="img/contents/bio-1.jpg"><img src="img/contents/bio-1.jpg"></a></li>
-                <li><a data-rel="lightcase" href="img/contents/bio-2.jpg"><img src="img/contents/bio-2.jpg"></a></li>
-                <li><a data-rel="lightcase" href="img/contents/bio-3.jpg"><img src="img/contents/bio-3.jpg"></a></li>
+                <div id="arrowDown" class="arrow"><img src="img/arrow-down.png" alt="fleche vers le bas"></div>
+                <li><a data-rel="lightcase" href="img/contents/bio-1.jpg"><img src="img/contents/bio-1.jpg" alt="Portrait d'Axelle Fanyo | Crédit : Capucine de Chocqueuse"></a></li>
+                <li><a data-rel="lightcase" href="img/contents/bio-2.jpg"><img src="img/contents/bio-2.jpg" alt="Portrait d'Axelle Fanyo | Crédit : Capucine de Chocqueuse"></a></li>
+                <li><a data-rel="lightcase" href="img/contents/bio-3.jpg"><img src="img/contents/bio-3.jpg" alt="Portrait d'Axelle Fanyo | Crédit : Capucine de Chocqueuse"></a></li>
              </ul>
         </div>
 
@@ -36,8 +35,8 @@ $biographys = $biography->fetch_all();
 
             <div id="titleWrapper">
             <div id="languageToggle">
-                <span id="enToggle" class="fr"><img src="img/flags/gb.svg">ENGLISH VERSION</span>
-                <span id="frToggle" class="en"><img src="img/flags/fr.svg">VERSION FRANCAISE</span>
+                <span id="enToggle" class="fr"><img src="img/flags/gb.svg" alt="Drapeau Anglais">ENGLISH VERSION</span>
+                <span id="frToggle" class="en"><img src="img/flags/fr.svg" alt="Drapeau Français">VERSION FRANCAISE</span>
             </div>
                 <div class="fr title">
                     <h2>A propos</h2>
@@ -73,6 +72,4 @@ $biographys = $biography->fetch_all();
 </body>
 <?php include 'components/footer.php';?>
 
-
 </html>
-<
