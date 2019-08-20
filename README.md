@@ -6,7 +6,7 @@
 Custom Website for the french Soprano singer Axelle Fanyo.
 
 Featuring a tailor-made PHP CMS with a custom backoffice using Spectre.CSS.
-We get satisfying loadtime results thanks to a framework-inspired file structure using includes.
+We get satisfying loading time results thanks to a framework-inspired file structure using includes.
 
 # Libraries used :
 - Spectre.CSS
