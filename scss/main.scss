@@ -844,7 +844,7 @@ ul {
             min-width: 100%;
         }
         @include media('<=small') {
-            float: none;
+            float: right;
             max-height: 442px;
             position: relative;
             display: inline-block;

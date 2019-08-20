@@ -1,6 +1,9 @@
 <meta charset="utf-8">
     <title>Axelle FANYO | Soprano </title>
-    <meta name="description" content="">
+    <meta name="description" content="Site internet officiel de la soprano Axelle Fanyo, chanteuse lyrique Française">
+    <meta property="og:title"              content="Axelle FANYO | Soprano" />
+    <meta property="og:description"        content="Site internet officiel de la soprano Axelle Fanyo, chanteuse lyrique Française" />
+    <meta property="og:image"              content="../img/preview.jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i&display=swap" rel="stylesheet">

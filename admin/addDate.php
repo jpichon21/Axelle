@@ -47,7 +47,7 @@ if (isset($_SESSION['logged_in'])) {
                 <div class="form-group column col-md-10 ">
                     <form action="addDate.php" method="post"  autocomplete="off">
                         <input class="form-input" type="text" name="title" placeholder="Titre"/>
-                        <input class="form-input" type="date" name="dateEvt" placeholder="Date de l'évènement"/>
+                        <input class="form-input" type="date" name="dateEvt" placeholder="AAAA-MM-JJ"/>
                         <input class="form-input" type="text" name="link" placeholder="Lien de l'évènement"/>
                         <textarea rows="3" class="form-input" name="content" placeholder="Description de la date"></textarea>
                         <input class="btn btn-primary input-group-btn" type="submit" value="Ajouter"/>

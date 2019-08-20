@@ -1,8 +1,8 @@
  <!----------Header-------->
  <header id="headerContainer">
  <ul id="socialContainer">
-              <li class="sociallinks"><a href="https://www.facebook.com"><i class="fab fa-facebook-square"></i></a></li>
-              <li class="sociallinks"><a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a></li>
+              <li class="sociallinks"><a href="https://www.facebook.com/axellefanyo/"><i class="fab fa-facebook-square"></i></a></li>
+              <li class="sociallinks"><a href="https://www.instagram.com/axellefanyo"><i class="fab fa-instagram"></i></a></li>
           </ul>
     <div>
         <div id="logoContainer">
