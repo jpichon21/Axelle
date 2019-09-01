@@ -15,7 +15,7 @@
         <div id="contactWrapper">
             <div id="contactImageContainer">
                     <div id="contactImage">
-                        <a data-rel="lightcase" href="img/CONTACT_AXELLE.jpg"><img src="img/CONTACT_AXELLE.jpg" alt="Portrait d'Axelle Fanyo | Crédit : Capucine de Chocqueuse"></a>
+                        <a data-rel="lightcase" href="img/CONTACT_AXELLE.jpg" data-lc-options='{"maxWidth":1000, "maxHeight":800}'><img src="img/CONTACT_AXELLE.jpg" alt="Portrait d'Axelle Fanyo | Crédit : Capucine de Chocqueuse"></a>
                     </div>
             </div>
             <div id="contactInfosContainer">

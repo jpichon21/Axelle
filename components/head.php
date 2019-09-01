@@ -24,7 +24,7 @@
 
     <script>
     	jQuery(document).ready(function($) {
-		    $('a[data-rel^=lightcase]').lightcase();
+            $('a[data-rel^=lightcase]').lightcase();
         });
         $(window).load(function() {
             if (window.innerWidth <= 568) {

@@ -25,9 +25,9 @@ $biographys = $biography->fetch_all();
         <div id="bioGalleryWrapper">
             <ul>
                 <div id="arrowDown" class="arrow"><img src="img/arrow-down.png" alt="fleche vers le bas"></div>
-                <li><a data-rel="lightcase" href="img/contents/bio-1.jpg"><img src="img/contents/bio-1.jpg" alt="Portrait d'Axelle Fanyo | Crédit : Capucine de Chocqueuse"></a></li>
-                <li><a data-rel="lightcase" href="img/contents/bio-2.jpg"><img src="img/contents/bio-2.jpg" alt="Portrait d'Axelle Fanyo | Crédit : Capucine de Chocqueuse"></a></li>
-                <li><a data-rel="lightcase" href="img/contents/bio-3.jpg"><img src="img/contents/bio-3.jpg" alt="Portrait d'Axelle Fanyo | Crédit : Capucine de Chocqueuse"></a></li>
+                <li><a data-rel="lightcase" href="img/contents/bio-1.jpg" data-lc-options='{"maxWidth":1000, "maxHeight":800}'><img src="img/contents/bio-1.jpg" alt="Portrait d'Axelle Fanyo | Crédit : Capucine de Chocqueuse" ></a></li>
+                <li><a data-rel="lightcase" href="img/contents/bio-2.jpg" data-lc-options='{"maxWidth":1000, "maxHeight":800}'><img src="img/contents/bio-2.jpg" alt="Portrait d'Axelle Fanyo | Crédit : Capucine de Chocqueuse"></a></li>
+                <li><a data-rel="lightcase" href="img/contents/bio-3.jpg" data-lc-options='{"maxWidth":1000, "maxHeight":800}'><img src="img/contents/bio-3.jpg" alt="Portrait d'Axelle Fanyo | Crédit : Capucine de Chocqueuse"></a></li>
              </ul>
         </div>
 

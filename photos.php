@@ -26,7 +26,7 @@ $scenes = $scene->fetch_all();
     <div class="flexslider" id="photosCarousel1">
         <ul class="slides">
             <?php foreach ($studios as $studio) { ?>
-                    <li><a data-rel="lightcase" href="img/contents/sliders/studio/<?php echo $studio['image_content'];?>"><img src="img/contents/sliders/studio/thumbs/<?php echo $studio['image_thumbnail'];?>" alt="<?php echo $studio['image_alt'];?>"/></a></li>
+                    <li><a data-rel="lightcase" data-lc-options='{"maxWidth":1000, "maxHeight":800}' href="img/contents/sliders/studio/<?php echo $studio['image_content'];?>"><img src="img/contents/sliders/studio/thumbs/<?php echo $studio['image_thumbnail'];?>" alt="<?php echo $studio['image_alt'];?>"/></a></li>
             <?php } ?>
         </ul>
 	</div>
@@ -34,7 +34,7 @@ $scenes = $scene->fetch_all();
     <div class="flexslider" id="photosCarousel2">
 		<ul class="slides">
             <?php foreach ($scenes as $scene) { ?>
-                    <li><a data-rel="lightcase" href="img/contents/sliders/scene/<?php echo $scene['image_content'];?>"><img src="img/contents/sliders/scene/thumbs/<?php echo $scene['image_thumbnail'];?>" alt="<?php echo $scene['image_alt'];?>"/></a></li>
+                    <li><a data-rel="lightcase" data-lc-options='{"maxWidth":1000, "maxHeight":800}' href="img/contents/sliders/scene/<?php echo $scene['image_content'];?>"><img src="img/contents/sliders/scene/thumbs/<?php echo $scene['image_thumbnail'];?>" alt="<?php echo $scene['image_alt'];?>"/></a></li>
             <?php } ?>
 		</ul>
 	</div>
